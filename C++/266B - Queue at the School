@@ -1,0 +1,20 @@
+// Amin Shahrabi Github
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	string input, in2;
+	int n, len;
+	
+	cin >> len >> n >> input;
+	in2 = input;
+	for (int i = 0; i < n; i++){
+		for (int j = len - 1; j > 0; j--){
+			if (input[j] == 'G' && input[j - 1] == 'B'){
+				in2[j - 1] = 'G';
+				in2[j] = 'B';
+			}
+		}
+		input = in2;
+	}
+	cout << in2;
+}
